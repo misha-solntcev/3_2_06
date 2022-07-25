@@ -22,11 +22,31 @@ namespace _3_2_06
             return myWords;
         }
 
+        static string FindAndWrite(string[] myWords)
+        {
+            string newString = "";
+            for (int i = 0; i < myWords.Length; i++)
+            {
+                bool flag = true;
+                for (int j = 0; j < myWords[i].Length; j++)
+                {
+                    if (char.IsUpper(myWords[i][j]) == false)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag)
+                    newString += myWords[i] + " ";
+            }
+            return newString;
+        }
 
         static void Main(string[] args)
         {
-            string myString = "dsgajk AShfsdjkal Abn hfds";            
-            Console.WriteLine();
+            string myString = "ABCD AShfsdjkal Abn hfds АБВГД ФaФ";
+            string newString = FindAndWrite(StringToWords(myString));
+            Console.WriteLine(newString);
             Console.ReadKey();
         }
     }
