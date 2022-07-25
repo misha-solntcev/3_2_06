@@ -21,21 +21,19 @@ namespace _3_2_06
             string[] myWords = myString.Split(sep, StringSplitOptions.RemoveEmptyEntries);            
             return myWords;
         }
-
+        // Функция ищет слова текста, которые содержат только большие буквы алфавита.
         static string FindAndWrite(string[] myWords)
         {
             string newString = "";
             for (int i = 0; i < myWords.Length; i++)
             {
                 bool flag = true;
-                for (int j = 0; j < myWords[i].Length; j++)
-                {
+                for (int j = 0; j < myWords[i].Length; j++)                
                     if (char.IsUpper(myWords[i][j]) == false)
                     {
                         flag = false;
                         break;
-                    }
-                }
+                    }                
                 if (flag)
                     newString += myWords[i] + " ";
             }
