@@ -25,8 +25,7 @@ namespace _3_2_06
 
         static void Main(string[] args)
         {
-            string myString = "dsgajk AShfsdjkal Abn hfds";
-            
+            string myString = "dsgajk AShfsdjkal Abn hfds";            
             Console.WriteLine();
             Console.ReadKey();
         }
